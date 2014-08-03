@@ -1,0 +1,26 @@
+Vector(x:number, y:number, z:number):vector - Constructs a vector
+
+Vector Class:
+vec:Sub(vec:vector):nil - Subtracts the vector from the one specified
+vec:Add(vec:vector):nil - Adds the vector to the one specified
+vec:Scale(scale:number):nil - Scales the vector
+vec:Length():number - Returns the length of the vector
+vec:Normalize():nil - Normalizes the vector (changes all axes to a -1 to 1 range)
+vec:GetNormalized():vector - Returns the normalized vector (but does not alter the vector that uses the function)
+vec:DotProduct(vec:vector):number - Returns the dot product of the vector
+vec:CrossProduct(vec:vector):number - Returns the cross product of the vector
+vec:ToAngles() - Converts the vector to angles
+vec:ToForward() - Converts the angle-vector to the forward vector
+vec:ToRight() - Converts the angle-vector to the right vector
+vec:ToUp() - Converts the angle-vector to the up vector
+vec:GetAngles() - Converts the vector to angles and returns the new angle-vector (Original vector remains unchanged)
+vec:GetForward() - Converts the angle-vector to the forward vector and returns this new vector (Original vector remains unchanged)
+vec:GetRight() - Converts the angle-vector to the right vector and returns this new vector (Original vector remains unchanged)
+vec:GetUp() - Converts the angle-vector to the up vector and returns this new vector (Original vector remains unchanged)
+vec:Copy():vector - Returns a copy of the vector
+
+vec.x - Get/set the X component of the vector
+vec.y - Get/set the Y component of the vector
+vec.z - Get/set the Z component of the vector
+
+Addition, subtraction, multiplication, division and comparing of vectors is also allowed

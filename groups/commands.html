@@ -1,0 +1,10 @@
+cmds.Add(command:string, func:function):nil - Binds the function to that command
+cmds.Remove(command:string):nil	- Unbinds the command
+
+cmds.AddRcon(command:string, func:function):nil - Binds the function to that command (rcon)
+cmds.RemoveRcon(command:string):nil - Unbinds the command (rcon)
+
+Function prototypes:
+
+Normal commands: command(ply:player, argc:number, argv:table)
+Rcon commands: command(argc:number, argv:table) - Use print for responses.

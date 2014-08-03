@@ -1,0 +1,15 @@
+
+Init():nil - Called when lua finished initializing.
+Shutdown():nil - Called before lua is shut down.
+
+PlayerConnect(ply:player, firsttime:bool, isbot:bool):string/nil - Called when a player connects, return a string (reason) to deny the connection.
+PlayerDisconnect(ply:player):nil - Called when a player disconnects.
+PlayerSay(ply:player, target:player/nil, mode:number,  text:string):bool/nil - Called when a player is trying to say something in chat. Return true to block the message.
+PlayerValidationFailed(ply:player):nil - Called when a player failed to validate its client-side. The player is kicked after the hook returns.
+PlayerBegin(ply:player):nil	- Called when a player finished connecting and is about to spawn for the first time
+PlayerDeath(ply:player, inflictor:entity, attacker:entity, damage:number, meansOfDeath:number):nil - Called when a player dies
+PlayerSpawned(ply:player):nil - Called when a player finished spawning (use for loadout for example)
+PlayerDeathcam(ply:player):number/nil - Called when a player is entering deathcam. To override the duration of deathcam, return the time in milliseconds to stay in deathcam (5000 is default). To force a respawn once the time is up, make the number negative (ie. -1000 = 1 second with forced respawn)
+SelectInitialSpawn(ply:player, team:number):ent/array (2 vectors)/nil - Called when a player is spawned for the first time. Return an ent or an array with two vectors (origin and angles) to specify one, or return nothing to ignore.
+SelectSpawn(ply:player, team:number, avoidpoint:vector):ent/array (2 vectors)/nil - Called when a player is spawning and looking for a spawn location. Return an ent or an array with two vectors (origin and angles) to specify one, or return nothing to ignore.
+SelectSpectatorSpawn(ply:player):ent/array (2 vectors)/nil - Called when a spectating player is spawning and looking for a spawn location. Return an ent or an array with two vectors (origin and angles) to specify one, or return nothing to ignore.

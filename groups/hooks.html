@@ -1,0 +1,8 @@
+
+hook.Add(hookname:string, uniqueid:string, func:function, [priority:number]):nil - Hooks the function to the specified event, uniqueid is used to avoid duplicate bindings (for example due to a lua_reload)
+hook.Remove(hookname:string, uniqueid:string):nil - Removes the specified hook
+
+NOTE: To avoid problems, if a hooked function causes an error, the function is unhooked
+Hooks have priorities going from 0 to 10, 0 being the lowest (default) and 10 the highest.
+Hooks will be called from priority 0 to priority 10, as the last return value is sent to the engine.
+This the return value of priority 10 hooks will override those of lower priority hooks.

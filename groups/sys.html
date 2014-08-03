@@ -1,0 +1,22 @@
+sys.GetCvarString(cvarname:string):string - Returns string value of specified cvar.
+sys.GetCvarInt(cvarname:string):number - Returns int value of specified cvar.
+sys.GetCvarFloat(cvarname:string):number - Returns float value of specified cvar.
+sys.SetCvar(cvar:string, value:string):nil - Sets the cvar to the specified value.
+sys.SetCS(ID:number, value:string):nil - Sets config string <ID> to the string value.
+sys.GetCS(ID:number):string - Returns the string value of the config string identified by <ID>.
+sys.Time():number - Returns the current server time (level.time).
+sys.Milliseconds():number - Returns the amount of milliseconds elapsed since the operating system started.
+sys.Time():number - Returns the current server time (in msecs)
+sys.Command(command:string):nil	- Executes the specified command
+sys.RemapShader(orgshader:string, newshader:string) - Performs a shader remap
+sys.EffectIndex(effect:string):number - Obtains the effect ID for the specified effect
+sys.PlayEffect(id:number, origin:vector, [angles:vector]) - Plays the specified effect at the provided origin and angles
+sys.RadiusDamage(origin:vector, [attacker:entity], damage:number, radius:number, ignore:entity, missile:entity, meansofdeath:number) - Does radius damage
+sys.PlaySound(origin:vector, sound:string, channel:number, ) - Plays sound at the specified location
+sys.PlaySoundIdx(origin:vector, soundid:number, channel:number, ) - Plays sound at the specified location (using the ID rather than name)
+sys.SoundIndex(sound:string):number - Returns the sound ID of the specified sound
+sys.WeaponClipSize(weapon:number):number - Returns the clipsize of the specified weapon (WP_ constant)
+sys.AmmoLimit(ammotype:number):number - Returns the limit of the specified type of ammo
+sys.MapName():string - Returns the name of the current map
+sys.SpotWouldTelefrag(ent:entity, location:vector):bool - Returns whether or not teleporting the ent to location would cause a telefrag
+sys.StripColorcodes(text:string):string - Retuns the passed string with all colorcodes removed

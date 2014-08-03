@@ -1,5 +1,93 @@
 <div class="panel panel-default">
-	<div class="panel-heading"></div>
-	<div class="panel-body"></div>
-	<div class="panel-footer"></div>
-</div>	<br />
+	<div class="panel-heading">json.Register(file:string)</div>
+	<div class="panel-body">Returns a jsonHandle (or in other words, the pointer to the root JSON node) for the given file, if it is a valid JSON file.</div>
+	<div class="panel-footer">Returns [jsonHandle] or [nil] on failure</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">json.GetObjectItem(root:jsonHandle, nodeName:string)</div>
+	<div class="panel-body">Gets a node</div>
+	<div class="panel-footer">Returns [jsonHandle]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.Clear(nil)</div>
+	<div class="panel-body">Run this func once you're done with json stuff.</div>
+	<div class="panel-footer">Returns [nil]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.GetFirstObject(node:jsonHandle)</div>
+	<div class="panel-body">Gets the first object within an object node</div>
+	<div class="panel-footer">Returns [jsonHandle]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.GetNextObject(node:jsonHandle)</div>
+	<div class="panel-body">Returns the next object that you're targetting. Returns nil if no node is found.</div>
+	<div class="panel-footer">Returns [jsonHandle] or [nil] on failure</div>
+</div>
+<hr>
+<div class="panel panel-default">
+	<div class="panel-heading">json.IsNumber(node:jsonHandle)</div>
+	<div class="panel-body">Returns true if the node is a number type</div>
+	<div class="panel-footer">Returns [bool]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.IsObject(node:jsonHandle)</div>
+	<div class="panel-body">Returns true if the node is an object type</div>
+	<div class="panel-footer">Returns [bool]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.IsBoolean(node:jsonHandle)</div>
+	<div class="panel-body">Returns true if the node is a boolean type</div>
+	<div class="panel-footer">Returns [bool]</div>
+</div>
+<hr>
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToString(node:jsonHandle)</div>
+	<div class="panel-body">Converts node to string</div>
+	<div class="panel-footer">Returns [string]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToNumber(node:jsonHandle)</div>
+	<div class="panel-body">Converts node to number</div>
+	<div class="panel-footer">Returns [number]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToInteger(node:jsonHandle)</div>
+	<div class="panel-body">Converts node to integer</div>
+	<div class="panel-footer">Returns [integer]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToBoolean(node:jsonHandle)</div>
+	<div class="panel-body">Converts node to boolean</div>
+	<div class="panel-footer">Returns [bool]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToStringOpt(node:jsonHandle, opt:string)</div>
+	<div class="panel-body">Converts node to string</div>
+	<div class="panel-footer">Returns [string] or [opt] if node does not exist</div>
+</div>	
+ <div class="panel panel-default">
+	<div class="panel-heading">json.ToNumberOpt(node:jsonHandle, opt:number)</div>
+	<div class="panel-body">Converts node to number</div>
+	<div class="panel-footer">Returns [number] or [opt] if node does not exist</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToIntegerOpt(node:jsonHandle, opt:integer)</div>
+	<div class="panel-body">Converts node to integer</div>
+	<div class="panel-footer">Returns [integer] or [opt] if node does not exist</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.ToBooleanOpt(node:jsonHandle, opt:boolean)</div>
+	<div class="panel-body">Converts node to boolean.</div>
+	<div class="panel-footer">Returns [bool] or [opt] if node does not exist</div>
+</div>	
+<hr>
+<div class="panel panel-default">
+	<div class="panel-heading">json.GetArraySize(node:jsonHandle)</div>
+	<div class="panel-body">Returns size of array object within node.</div>
+	<div class="panel-footer">Returns [integer]</div>
+</div>	
+<div class="panel panel-default">
+	<div class="panel-heading">json.GetArrayItem(node:jsonHandle, member:integer)</div>
+	<div class="panel-body">Returns node within array</div>
+	<div class="panel-footer">Returns [jsonHandle]</div>
+</div>
