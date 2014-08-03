@@ -1,0 +1,17 @@
+Most standard Lua functions can be used, excluding functions that execute code (use include instead) or access files (use file. instead)<br />
+<br />
+<div class="panel panel-default">
+	<div class="panel-heading">print(message:string)</div>
+	<div class="panel-body">Displays the message in the console, also used to respond to rcon commands</div>
+	<div class="panel-footer">Returns [nil]</div>
+</div>	<br />
+<div class="panel panel-default">
+	<div class="panel-heading">include(file:string)</div>
+	<div class="panel-body">Paths are relative to the current script's location. To use root paths (from GameData), start the path with '/'</div>
+	<div class="panel-footer">Returns [bool] of success</div>
+</div><br />
+<div class="panel panel-default">
+	<div class="panel-heading">PrintTable(tbl:table)</div>
+	<div class="panel-body">Displays the contents of the specified table in the console</div>
+	<div class="panel-footer">Returns [nil]</div>
+</div><br />
